@@ -1,0 +1,15 @@
+{
+    "settings": {
+        "broker": "mqtt://io.adafruit.com", 
+        "username": "TheDevMinerTV",
+        "token": "769b94548d934f91ace90de9b110cb2a"
+    },
+    
+    "devices": [
+        {
+            "mac": "38:f7:3d:b4:53:08",
+            "feed": "TheDevMinerTV/feeds/tests",
+            "message": "Button 1 pressed"
+        }
+    ]
+}

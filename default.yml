@@ -1,0 +1,5 @@
+---
+- name: Setup for Raspberry Pi dashbutton listeners
+  hosts: localhost
+  roles:
+    - ansible-role-raspberry-pi-dashlistener
