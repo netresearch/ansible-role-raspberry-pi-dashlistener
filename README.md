@@ -24,8 +24,8 @@ Raspbian (with ssh-server enabled and key copied) >= stretch
 
 | variable   | state           | example       |
 | ---------- | --------------- | ------------- |
-| wifi_name  | "wifi-name"     | "LEJ2"        |
-| wifi_psk   | "wifi-password" | "javihu4555"  |
+| wifi_name  | "wifi-name"     | "YOUR-SSID"   |
+| wifi_psk   | "wifi-password" | "YOUR-PASS"   |
 
 ## Example playbook
 
