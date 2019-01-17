@@ -18,4 +18,5 @@ galaxy_info:
         - xenial
         - bionic
   galaxy_tags: []
-  dependencies: []
+  dependencies: 
+  - layereight.wifi
