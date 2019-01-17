@@ -1,0 +1,4 @@
+---
+- name: layereight.wifi
+  src: external/layereight.wifi
+  version: "1.2"

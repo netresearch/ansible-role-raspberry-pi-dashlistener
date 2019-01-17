@@ -1,3 +1,9 @@
 ---
+- roles:
+  - external/layereight.wifi
+  vars: 
+    wifi_ssid: {{ wifi_name }}
+    wifi_psk: {{ wifi_psk }}
+
 - include_tasks: packages.yml
 - include_tasks: dashlistener.yml
