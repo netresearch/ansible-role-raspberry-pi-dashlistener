@@ -31,7 +31,7 @@ Raspbian (with ssh-server enabled and key copied) >= stretch
 
 ```yaml
 - name: Configure raspberry pi as dashlistener
-  hosts: kiosk.netresearch.nr
+  hosts: dashlistener.netresearch.nr
   tasks:
     - name: Configure dashbutton-listener
       include_role:
