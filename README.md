@@ -20,6 +20,10 @@ Raspbian (with ssh-server enabled and key copied) >= stretch
 10. Open a terminal with `Alt + Ctrl + F1` and type `ssh-keygen` and press `Enter` 3 times.
 11. `Enjoy!`
 
+## Files
+
+Customize the file files/dash-listener-config.json
+
 ## Variables
 
 | variable   | state           | example       |
