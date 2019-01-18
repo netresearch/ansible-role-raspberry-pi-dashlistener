@@ -41,6 +41,6 @@ Customize the file files/dash-listener-config.json
       include_role:
         name: raspberry-pi-dashlistener
       vars:
-        wifi_name: "LEJ2"
-        wifi_psk: "javihu4555"
+        wifi_name: "HomeSweetHome"
+        wifi_psk: "A8B7C6D5E4F3G2H1"
 ```
