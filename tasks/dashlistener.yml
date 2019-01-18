@@ -17,11 +17,11 @@
     - "../files/dash-listener-config.json"
 
 - name: "Installing required libraries"
-  shell:
+  shell: "npm install && sudo npm install pm2 -g"
+  args:
     chdir: "/home/pi/amazon-dash-mqtt"
-    free_form: "npm install && sudo npm install pm2 -g"
 
 - name: "Setting autostart for dash-listener"
-  shell:
+  shell: "pm2 start app.js && pm2 startup"
+  args:
     chdir: "/home/pi/amazon-dash-mqtt"
-    free_form: "pm2 start app.js && pm2 startup"
