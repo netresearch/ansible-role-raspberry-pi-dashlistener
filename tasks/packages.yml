@@ -4,6 +4,11 @@
   shell: "curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.1/install.sh | bash"
   tags: nvm-install
 
+- name: "Installing libpcap"
+  apt:
+    name: libpcap-dev
+    state: present
+
 - name: "Installing node"
   become: pi
   shell: '. /home/pi/.nvm/nvm.sh && nvm install node'
