@@ -1,9 +1,18 @@
 ---
+
+- name: "Setting dash button listener hostname"
+  hostname:
+    name: "dashlistener"
+
 - import_role: 
     name: external/wifi
   vars: 
     wifi_ssid: "{{ wifi_name }}"
     wifi_psk: "{{ wifi_password }}"
+
+- name: "Rebooting to apply changes"
+  reboot:
+    reboot_timeout: 50
 
 - include_tasks: packages.yml
 - include_tasks: dashlistener.yml
