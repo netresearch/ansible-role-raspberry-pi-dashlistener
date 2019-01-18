@@ -3,7 +3,7 @@
   tags: clone-dash-listener
   become_user: pi
   git:
-    dest: /home/pi/dash-listener
+    dest: "/home/pi/amazon-dash-mqtt/"
     repo: https://github.com/vergissberlin/amazon-dash-mqtt.git
 
 - name: "Configuring amazon-dash-mqtt"
@@ -11,7 +11,7 @@
   become: pi
   copy:
     src: "{{ item }}"
-    dest: "/home/pi/amazon-dash-mqtt"
+    dest: "/home/pi/amazon-dash-mqtt/"
     owner: "pi"
     mode: 0744
   with_fileglob:
@@ -20,7 +20,7 @@
 - name: "Installing required libraries"
   shell: "npm install && sudo npm install pm2 -g"
   args:
-    chdir: "/home/pi/amazon-dash-mqtt"
+    chdir: "/home/pi/amazon-dash-mqtt/"
 
 - name: "Setting autostart for dash-listener"
   become: pi
