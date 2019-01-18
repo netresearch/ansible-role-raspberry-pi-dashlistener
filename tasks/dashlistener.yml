@@ -11,7 +11,7 @@
   become: pi
   copy:
     src: "{{ item }}"
-    dest: "/home/pi/amazon-dash-mqtt/"
+    dest: "/home/pi/amazon-dash-mqtt/config.json"
     owner: "pi"
     mode: 0744
   with_fileglob:
