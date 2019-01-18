@@ -8,6 +8,7 @@
 
 - name: "Configuring amazon-dash-mqtt"
   tags: configure-dash-listener
+  become: pi
   copy:
     src: "{{ item }}"
     dest: "/home/pi/amazon-dash-mqtt"
@@ -22,6 +23,7 @@
     chdir: "/home/pi/amazon-dash-mqtt"
 
 - name: "Setting autostart for dash-listener"
+  become: pi
   shell: "pm2 start app.js && pm2 startup"
   args:
     chdir: "/home/pi/amazon-dash-mqtt"
