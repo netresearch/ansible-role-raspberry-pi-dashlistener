@@ -1,6 +1,6 @@
 ---
-- roles:
-  - external/layereight.wifi
+- import_role: 
+    name: external/wifi
   vars: 
     wifi_ssid: "{{ wifi_name }}"
     wifi_psk: "{{ wifi_psk }}"
