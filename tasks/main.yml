@@ -11,6 +11,8 @@
     wifi_psk: "{{ wifi_password }}"
 
 - name: "Rebooting to apply changes"
+  become: true
+  become_user: root
   reboot:
     reboot_timeout: 50
 
