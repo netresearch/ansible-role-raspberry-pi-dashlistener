@@ -1,6 +1,7 @@
 ---
 - name: "Installing nvm"
-  become_user: pi
+  become: true
+  become_user: true
   warn: false
   shell: "curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.1/install.sh | bash"
   tags: nvm-install
@@ -11,7 +12,8 @@
     state: present
 
 - name: "Installing node"
-  become: pi
+  become: yes
+  become_user: pi
   shell: '. /home/pi/.nvm/nvm.sh && nvm install node'
   args:
     creates: "/home/pi/.nvm/versions/node"
@@ -20,4 +22,6 @@
   tags: install-node
 
 - name: "Installing pm2"
+  become: yes
+  become_user: pi
   shell: "npm install pm2 -g"

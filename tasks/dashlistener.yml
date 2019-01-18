@@ -1,6 +1,7 @@
 ---
 - name: "Cloning amazon-dash-mqtt"
   tags: clone-dash-listener
+  become: yes
   become_user: pi
   git:
     dest: "/home/pi/amazon-dash-mqtt/"
@@ -8,7 +9,8 @@
 
 - name: "Configuring amazon-dash-mqtt"
   tags: configure-dash-listener
-  become: pi
+  become: yes
+  become_user: pi
   copy:
     src: "{{ item }}"
     dest: "/home/pi/amazon-dash-mqtt/config.json"
@@ -18,13 +20,15 @@
     - "../files/dash-listener-config.json"
 
 - name: "Installing required libraries"
-  become: pi
+  become: yes
+  become_user: pi
   shell: "npm install"
   args:
     chdir: "/home/pi/amazon-dash-mqtt/"
 
 - name: "Setting autostart for dash-listener"
-  become: pi
+  become: yes
+  become_user: pi
   shell: "pm2 start app.js && pm2 startup"
   args:
     chdir: "/home/pi/amazon-dash-mqtt"
