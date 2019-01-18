@@ -26,10 +26,10 @@ Customize the file files/dash-listener-config.json
 
 ## Variables
 
-| variable   | state           | example       |
-| ---------- | --------------- | ------------- |
-| wifi_name  | "wifi-name"     | "YOUR-SSID"   |
-| wifi_psk   | "wifi-password" | "YOUR-PASS"   |
+| variable      | state           | example       |
+| ------------- | --------------- | ------------- |
+| wifi_name     | "wifi-name"     | "YOUR-SSID"   |
+| wifi_password | "wifi-password" | "YOUR-PASS"   |
 
 ## Example playbook
 
