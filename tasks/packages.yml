@@ -17,3 +17,6 @@
     chdir: "/home/pi"
     executable: /bin/bash
   tags: install-node
+
+- name: "Installing pm2"
+  shell: "npm install pm2 -g"
