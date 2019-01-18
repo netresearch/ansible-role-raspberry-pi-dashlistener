@@ -18,7 +18,8 @@
     - "../files/dash-listener-config.json"
 
 - name: "Installing required libraries"
-  shell: "npm install && sudo npm install pm2 -g"
+  become: pi
+  shell: "npm install"
   args:
     chdir: "/home/pi/amazon-dash-mqtt/"
 
