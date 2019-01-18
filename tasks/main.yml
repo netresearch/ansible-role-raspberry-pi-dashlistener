@@ -14,7 +14,7 @@
   become: true
   become_user: root
   reboot:
-    reboot_timeout: 50
+    reboot_timeout: 60
 
 - include_tasks: packages.yml
 - include_tasks: dashlistener.yml
