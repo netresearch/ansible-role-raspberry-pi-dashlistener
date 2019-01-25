@@ -1,22 +1,21 @@
 ---
-- name: "Installing nvm"
+- name: "Download node sources"
   become: true
   become_user: pi
-  warn: false
-  shell: "curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.1/install.sh | bash"
-  tags: nvm-install
+  shell: "curl -sL https://deb.nodesource.com/setup_11.x | sudo -E bash -"
+  tags: "install-node" 
 
 - name: "Installing libpcap"
   apt:
     name: libpcap-dev
     state: present
+  tags: "install-node" 
 
 - name: "Installing node"
   become: yes
   become_user: pi
-  shell: '. /home/pi/.nvm/nvm.sh && nvm install node'
+  shell: "apt install -y nodejs"
   args:
-    creates: "/home/pi/.nvm/versions/node"
     chdir: "/home/pi"
     executable: /bin/bash
   tags: install-node

@@ -3,7 +3,7 @@ galaxy_info:
   author: Tobias Schneehardt <tobigames200@gmail.com>
   description: This role contains a basic setup for dashbutton listeners at NR.
   company: Netresearch GmbH & Co. KG
-  license: BSD
+  license: MIT
   min_ansible_version: 2.5
   platforms:
     - name: Debian
